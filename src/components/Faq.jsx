@@ -46,12 +46,13 @@ const FAQ = () => {
 {questions.map((question, index) => (
   <div
     key={index}
-    className={`border-l-4 border-blue-500 rounded-lg p-4 cursor-pointer ${expandedIndices.includes(index) ? 'bg-[#1C4670] text-white' : ''
+    className={` rounded-lg relative p-4 cursor-pointer ${expandedIndices.includes(index) ? 'bg-[#1C4670] text-white' : ''
       }`}
     onClick={() => toggleAccordion(index)}
   >
-    <div className="w-full flex justify-between">
-      <h3 className="text-base sm:text-lg font-semibold mb-2 flex items-center">
+    <div className="w-full flex justify-between ">
+      <h3 className="text-base h-[59px] sm:text-lg font-semibold mb-2 flex items-center">
+    <div className="w-[6px] h-full mr-2 relative flex flex-col bg-gradient-to-t to-[#FFA229] from-[#1C4670] rounded-l-md"></div>
         {question.title}
       </h3>
       <span className="ml-2 justify-end font-bold text-lg sm:text-xl">
